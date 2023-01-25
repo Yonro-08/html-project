@@ -302,6 +302,13 @@ $title25: 700 2.8em/1em "BebasNeue";
         }
       }
     }
+    @media (max-width: 768px) {
+      .content__cards {
+        .content__card {
+          grid-template-columns: max-content 1fr;
+        }
+      }
+    }
   }
 
   &__prices {
@@ -513,14 +520,6 @@ $title25: 700 2.8em/1em "BebasNeue";
 
         .img-2 {
           display: none;
-        }
-      }
-    }
-
-    &__content {
-      .content__cards {
-        .content__card {
-          grid-template-columns: max-content 1fr;
         }
       }
     }

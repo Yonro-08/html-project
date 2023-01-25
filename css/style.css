@@ -261,6 +261,12 @@
     grid-template-columns: 200px 1fr;
   }
 }
+@media (max-width: 768px) {
+  .services__content .content__cards .content__card {
+    grid-template-columns: -webkit-max-content 1fr;
+    grid-template-columns: max-content 1fr;
+  }
+}
 .services__prices {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -436,10 +442,6 @@
   }
   .services__visual .visual__imgs .img-2 {
     display: none;
-  }
-  .services__content .content__cards .content__card {
-    grid-template-columns: -webkit-max-content 1fr;
-    grid-template-columns: max-content 1fr;
   }
   .services__prices {
     grid-template-columns: 1fr;
