@@ -1367,47 +1367,6 @@
   }
 }
 
-@-webkit-keyframes curtains {
-  from {
-    transform: translateX(0px) rotate(30deg);
-  }
-  to {
-    transform: translateX(500px) rotate(30deg);
-    width: 0%;
-  }
-  to {
-    width: 120%;
-  }
-}
-
-@keyframes curtains {
-  from {
-    transform: translateX(0px) rotate(30deg);
-  }
-  to {
-    transform: translateX(500px) rotate(30deg);
-    width: 0%;
-  }
-  to {
-    width: 120%;
-  }
-}
-.request .request__step {
-  overflow: hidden;
-}
-.request .request__step::before {
-  content: "";
-  position: absolute;
-  left: -40px;
-  top: -100px;
-  width: 100px;
-  height: 250%;
-  background-color: rgba(255, 255, 255, 0.2666666667);
-  transform: rotate(30deg);
-  -webkit-animation: curtains 3s infinite ease-in;
-          animation: curtains 3s infinite ease-in;
-}
-
 .guarantees {
   overflow: hidden;
 }
