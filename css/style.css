@@ -1060,10 +1060,14 @@
 }
 .about__card .card__btn img {
   width: 30px;
+  transition: all 1s ease;
 }
 .about__card:hover {
   background-color: #ea4c14;
   border: none;
+}
+.about__card:hover .card__btn img {
+  transform: translateX(30px);
 }
 .about__cards::before {
   position: absolute;
@@ -1451,4 +1455,26 @@
   100% {
     width: 0%;
   }
+}
+
+@-webkit-keyframes back_2 {
+  from {
+    filter: none;
+  }
+  to {
+    filter: drop-shadow(16px 16px 20px blue);
+  }
+}
+
+@keyframes back_2 {
+  from {
+    filter: none;
+  }
+  to {
+    filter: drop-shadow(16px 16px 20px blue);
+  }
+}
+.request .request__step {
+  -webkit-animation: back_2 2s infinite ease;
+          animation: back_2 2s infinite ease;
 }

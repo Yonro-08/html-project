@@ -1225,6 +1225,7 @@ $title25: 700 2.8em/1em "BebasNeue";
 
       img {
         width: 30px;
+        transition: all 1s ease;
       }
     }
   }
@@ -1232,6 +1233,11 @@ $title25: 700 2.8em/1em "BebasNeue";
   &__card:hover {
     background-color: $color;
     border: none;
+    .card__btn {
+      img {
+        transform: translateX(30px);
+      }
+    }
   }
 
   &__cards::before {
@@ -1669,5 +1675,18 @@ $title25: 700 2.8em/1em "BebasNeue";
     100% {
       width: 0%;
     }
+  }
+}
+.request {
+  @keyframes back_2 {
+    from {
+      filter: none;
+    }
+    to {
+      filter: drop-shadow(16px 16px 20px blue);
+    }
+  }
+  .request__step {
+    animation: back_2 2s infinite ease;
   }
 }
