@@ -103,25 +103,31 @@ $title25: 700 2.8em/1em "BebasNeue";
       display: none;
     }
   }
+
   @media (max-width: 980px) {
     .menu {
       display: none;
     }
+
     .header__dropnav {
       display: block;
     }
+
     .header__dropnav:hover .header__dropmenu {
       display: block;
       height: 320px;
       padding: 10px;
+
       li:hover {
         color: $color;
       }
     }
+
     &__container::after {
       display: none;
     }
   }
+
   @media (max-width: 768px) {
     &__logo {
       display: none;
@@ -140,11 +146,13 @@ $title25: 700 2.8em/1em "BebasNeue";
         display: none;
       }
     }
+
     .header__dropnav:hover .header__dropmenu {
       height: 250px;
     }
   }
 }
+
 .services {
   padding: 9.3rem 0;
   overflow-x: hidden;
@@ -170,6 +178,7 @@ $title25: 700 2.8em/1em "BebasNeue";
         margin-bottom: 2.5rem;
         letter-spacing: 0.02rem;
       }
+
       .visual__btn {
         margin-right: 1rem;
       }
@@ -290,6 +299,13 @@ $title25: 700 2.8em/1em "BebasNeue";
 
         .content__card {
           grid-template-columns: 200px 1fr;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .content__cards {
+        .content__card {
+          grid-template-columns: max-content 1fr;
         }
       }
     }
@@ -487,6 +503,7 @@ $title25: 700 2.8em/1em "BebasNeue";
     &__visual {
       .visual__content {
         width: 100%;
+
         .visual__title {
           font-size: 3.1em;
         }
@@ -507,13 +524,6 @@ $title25: 700 2.8em/1em "BebasNeue";
       }
     }
 
-    &__content {
-      .content__cards {
-        .content__card {
-          grid-template-columns: max-content 1fr;
-        }
-      }
-    }
     &__prices {
       grid-template-columns: 1fr;
 
@@ -539,10 +549,12 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
 }
+
 .guarantees {
   position: relative;
   padding: 3rem 0;
   background-color: #171719;
+
   &__content {
     display: grid;
     grid-template-columns: 180px 1fr;
@@ -684,6 +696,7 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
 }
+
 .advantages {
   padding: 7.5rem 0;
   background-color: #2e2e31;
@@ -797,12 +810,14 @@ $title25: 700 2.8em/1em "BebasNeue";
       background-color: #9da0a3;
     }
   }
+
   @media (max-width: 980px) {
     & {
       display: none;
     }
   }
 }
+
 .request {
   padding: 5rem 0;
   background-color: #222224;
@@ -857,15 +872,18 @@ $title25: 700 2.8em/1em "BebasNeue";
     border: 2px solid #f5f5f5;
     border-radius: 6px;
   }
+
   .request__btn:hover {
     background-color: $color;
   }
+
   @media (max-width: 980px) {
     & {
       display: none;
     }
   }
 }
+
 .projects {
   padding: 7.5rem 0;
   background-color: #2e2e31;
@@ -906,7 +924,7 @@ $title25: 700 2.8em/1em "BebasNeue";
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-bottom: 2.5rem;
-
+    
     .imgs__column {
       display: grid;
       gap: 1.5rem;
@@ -973,15 +991,21 @@ $title25: 700 2.8em/1em "BebasNeue";
     width: 436px;
     height: 64px;
     margin: 0 auto;
+    background-color: transparent;
     border: 2px solid #ffffff;
     border-radius: 6px;
   }
 
+  &__btn:hover {
+    background-color: $color;
+  }
+
   @media (max-width: 980px) {
     & {
-      padding: 60px 0;
+      padding: 3rem 0;
       background-color: #222224;
     }
+
     &__title {
       margin-bottom: 1rem;
       text-align: center;
@@ -1006,6 +1030,10 @@ $title25: 700 2.8em/1em "BebasNeue";
 
       .imgs__column {
         .projects__img {
+          a {
+            height: 350px;
+            object-position: bottom;
+          }
           img {
             filter: grayscale(0%);
           }
@@ -1078,9 +1106,11 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
 }
+
 .director {
   padding: 5rem 0;
   background-color: #2e2e31;
+
   &__title {
     margin-bottom: 1.75rem;
     font: $title25;
@@ -1133,12 +1163,15 @@ $title25: 700 2.8em/1em "BebasNeue";
     & {
       background-color: #222224;
     }
+
     &__container {
       padding: 0 1rem;
     }
+
     &__title {
       display: none;
     }
+
     &__row {
       grid-template-columns: max-content 1fr;
       gap: 1.5rem;
@@ -1161,55 +1194,67 @@ $title25: 700 2.8em/1em "BebasNeue";
       }
     }
   }
+
   @media (max-width: 768px) {
     & {
       display: none;
     }
   }
 }
+
 .about {
   padding: 5rem 0;
   background-color: #2e2e31;
+
   .about__title {
     margin-bottom: 3rem;
     font: $title25;
   }
+
   &__cards {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
+
   &__card {
     display: flex;
     flex-direction: column;
     padding: 1.5rem 2.5rem;
     border: 1px solid #414141;
+
     .card__img {
       position: relative;
       height: 60px;
       margin-bottom: 2rem;
     }
+
     .card__text {
       margin-bottom: 2rem;
       text-align: center;
       flex-grow: 1;
     }
+
     .card__btn {
       display: grid;
       grid-template-columns: repeat(2, max-content);
       justify-content: center;
       margin: 0 auto;
       gap: 1rem;
+      cursor: pointer;
+
       img {
         width: 30px;
       }
     }
   }
+
   &__card:hover {
     background-color: $color;
     border: none;
   }
+
   &__cards::before {
     position: absolute;
     content: "";
@@ -1219,6 +1264,7 @@ $title25: 700 2.8em/1em "BebasNeue";
     height: 2px;
     background-color: #e3e2e2;
   }
+
   &__cards::after {
     position: absolute;
     content: "";
@@ -1228,59 +1274,72 @@ $title25: 700 2.8em/1em "BebasNeue";
     height: 2px;
     background-color: #e74214;
   }
+
   @media (max-width: 1600px) {
     &__cards {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
   @media (max-width: 1280px) {
     &__cards {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
   @media (max-width: 980px) {
     & {
       display: none;
     }
   }
 }
+
 .calculate {
   padding: 5rem 0;
   background-color: #2e2e31;
+
   &__title {
     margin-bottom: 2.5rem;
     text-align: center;
     font: 700 3.4em/1.1em "BebasNeue";
   }
+
   &__request {
     margin: 0 auto;
     color: #ffffff;
+
     .request__title {
       display: none;
       margin-bottom: 2rem;
       text-align: center;
       font: 700 3.9em/1em "BebasNeue";
     }
+
     .request__content {
       display: grid;
-      grid-template-columns: 50%;
+      grid-template-columns: 450px;
       justify-content: center;
       gap: 1.5rem;
+
       input {
         height: 70px;
         text-indent: 0.9rem;
         border-radius: 6px;
       }
+
       input::placeholder {
         color: #9a9a9a;
       }
+
       p {
         color: #a5a5a5;
         text-align: center;
+
         span {
           color: $color;
         }
       }
+
       .request__btn {
         padding: 1rem 2.5rem;
         color: #ffffff;
@@ -1289,26 +1348,33 @@ $title25: 700 2.8em/1em "BebasNeue";
       }
     }
   }
+
   @media (max-width: 980px) {
     & {
       padding: 5rem 0;
       background-color: #222224;
     }
+
     &__title {
       display: none;
     }
+
     &__request {
       padding: 3rem 2rem;
       background-color: #2e2e31;
       border-radius: 8px;
+
       .request__title {
         display: block;
       }
+
       .request__content {
         grid-template-columns: repeat(2, 1fr);
+
         p {
           text-align: start;
         }
+
         .request__btn {
           grid-column: 1/2;
           grid-row: 2/3;
@@ -1316,88 +1382,109 @@ $title25: 700 2.8em/1em "BebasNeue";
       }
     }
   }
-  @media (max-width: 480px) {
+
+  @media (max-width: 768px) {
     .request__content {
       grid-template-columns: 1fr;
+
       input {
         background-color: transparent;
         border: 2px solid #e5e5e5;
       }
+
       input:last-of-type {
         margin-bottom: 0.7rem;
       }
+
       .request__btn {
         grid-row: 3/4;
         padding: 1rem 2rem;
       }
+
       p {
         text-align: center;
       }
     }
   }
 }
+
 .footer {
   position: relative;
   padding: 5rem 0;
   padding-bottom: 2rem;
   background-color: #070707;
+
   &__rows {
     margin-bottom: 4rem;
+
     .row_1 {
       display: grid;
       grid-template-columns: max-content 1fr;
       justify-content: space-between;
       gap: 1rem;
       margin-bottom: 3rem;
+
       .footer__logo {
         width: 190px;
         height: 37px;
       }
+
       .footer__list {
         justify-content: flex-end;
         font-size: 1.1em;
         line-height: 1.35em;
       }
+
       .menu a::after {
         top: 100%;
         left: 0;
       }
+
       .menu a:hover::after {
         width: 100%;
       }
     }
+
     .row_2 {
       display: flex;
       gap: 2.5rem;
       margin-bottom: 2.75rem;
+
       a {
         color: #e74214;
         text-decoration: underline;
         text-decoration-skip-ink: none;
       }
     }
+
     .row_3 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+
       .footer__graph {
         .txt_1 {
           margin-bottom: 0.7rem;
         }
+
         .txt_2 {
           margin-bottom: 0.6rem;
         }
       }
+
       .footer__contact {
         display: grid;
         font-size: 1.1em;
         line-height: 1.25em;
+
         a {
           justify-self: end;
         }
+
         a:hover {
           color: $color;
         }
+
         a:last-of-type {
           align-self: flex-end;
           color: #e74214;
@@ -1406,16 +1493,19 @@ $title25: 700 2.8em/1em "BebasNeue";
         }
       }
     }
+
     .row_4 {
       display: none;
       color: #e74214;
       text-decoration: underline;
       text-decoration-skip-ink: none;
     }
+
     .row_5 {
       display: none;
     }
   }
+
   &__rows::before {
     content: "";
     position: absolute;
@@ -1425,131 +1515,148 @@ $title25: 700 2.8em/1em "BebasNeue";
     height: 0.6px;
     background-color: #e3e2e2;
   }
+
   @media (max-width: 980px) {
     &__container {
       padding: 0 1.5rem;
     }
+
     &__rows {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: baseline;
       row-gap: 1.6rem;
       margin-bottom: 1rem;
+
       .row_1 {
         height: 100%;
         grid-template-columns: 1fr;
         margin-bottom: 0px;
+
         .footer__nav {
           display: grid;
         }
+
         .footer__list {
           flex-direction: column;
           align-self: end;
           gap: 1.5rem;
+
           .miss {
             display: none;
           }
         }
       }
+
       .row_3 {
         grid-template-columns: 1fr;
         grid-column: 2/3;
         grid-row: 1/2;
         gap: 1.7rem;
+
         .footer__graph {
           text-align: end;
           grid-row: 2/3;
+
           .footer__addres {
             margin-bottom: 1.5rem;
           }
         }
+
         .footer__contact {
           gap: 1.5rem;
+
           .miss {
             display: none;
           }
         }
       }
+
       .row_4 {
         display: block;
         grid-row: 2/3;
         grid-column: span 2;
       }
+
       .row_2 {
         grid-column: span 2;
       }
     }
   }
+
   @media (max-width: 480px) {
     &__rows {
       height: min-content;
       margin-bottom: 3rem;
-      .row_3 {
-        grid-template-columns: none;
-        .footer__graph {
+
+      .row_1 {
+        .footer__logo {
+          width: 104px;
+          height: 20px;
+        }
+
+        .miss_1 {
           display: none;
         }
       }
-      .row_2 {
-        display: none;
-      }
-      .row_4 {
-        grid-row: 3/4;
-      }
-      .row_5 {
-        display: block;
-        grid-row: 2/3;
-        grid-column: span 2;
-        margin-bottom: 0.2rem;
-        .txt_1 {
-          margin-bottom: 0.5rem;
+
+      .row_3 {
+        grid-template-columns: none;
+        font-size: 0.8em;
+
+        .row_3 {
+          grid-template-columns: none;
+
+          .footer__graph {
+            display: none;
+          }
+        }
+
+        .row_2 {
+          display: none;
+        }
+
+        .row_4 {
+          grid-row: 3/4;
+        }
+
+        .row_5 {
+          display: block;
+          grid-row: 2/3;
+          grid-column: span 2;
+          margin-bottom: 0.2rem;
+
+          .txt_1 {
+            margin-bottom: 0.5rem;
+          }
         }
       }
     }
   }
-}
-// animation
-@keyframes curtains {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 120%;
-  }
-}
-.request {
-  .request__step {
-    overflow: hidden;
-  }
-  .request__step::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -100px;
-    width: 0px;
-    height: 250%;
-    background-color: #ffffff44;
-    transform: rotate(30deg);
-    animation: curtains 3s infinite linear;
-  }
+
 }
 
-//
+// animation
+
 .guarantees {
   overflow: hidden;
   .guarantees__img {
     overflow: hidden;
+
     img {
       animation: scl 3s infinite linear;
     }
   }
+
   @keyframes scl {
     0% {
       transform: scale(1);
     }
+
     50% {
       transform: scale(1.1);
     }
+
     100% {
       transform: scale(1);
     }
@@ -1559,6 +1666,7 @@ $title25: 700 2.8em/1em "BebasNeue";
   .content__card {
     position: relative;
   }
+
   .content__card::before {
     content: "";
     position: absolute;
@@ -1569,13 +1677,16 @@ $title25: 700 2.8em/1em "BebasNeue";
     background: linear-gradient(rgba(255, 0, 0, 0.142), rgba(255, 255, 0, 0.26), rgba(0, 0, 255, 0.144), rgba(255, 166, 0, 0.18));
     animation: back 5s infinite ease-in-out;
   }
+
   @keyframes back {
     0% {
       width: 0%;
     }
+
     50% {
       width: 100%;
     }
+
     100% {
       width: 0%;
     }

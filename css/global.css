@@ -130,6 +130,8 @@ select {
   padding: 1rem 2.8rem;
   background-color: var(--color);
   border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .btn a {
   width: max-content;
