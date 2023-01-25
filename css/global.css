@@ -130,6 +130,7 @@ select {
   padding: 1rem 2.8rem;
   background-color: var(--color);
   border-radius: 6px;
+  cursor: pointer;
 }
 .btn a {
   width: max-content;
