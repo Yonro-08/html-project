@@ -1062,3 +1062,92 @@
     display: none;
   }
 }
+
+.calculate {
+  padding: 5rem 0;
+}
+.calculate__title {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font: 700 3.4em/1.1em "BebasNeue";
+}
+.calculate__request {
+  margin: 0 auto;
+  color: #ffffff;
+}
+.calculate__request .request__title {
+  display: none;
+  margin-bottom: 2rem;
+  text-align: center;
+  font: 700 3.9em/1em "BebasNeue";
+}
+.calculate__request .request__content {
+  display: grid;
+  grid-template-columns: 50%;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.calculate__request .request__content input {
+  height: 70px;
+  text-indent: 0.9rem;
+  border-radius: 6px;
+}
+.calculate__request .request__content input::-moz-placeholder {
+  color: #9A9A9A;
+}
+.calculate__request .request__content input:-ms-input-placeholder {
+  color: #9A9A9A;
+}
+.calculate__request .request__content input::placeholder {
+  color: #9A9A9A;
+}
+.calculate__request .request__content p {
+  color: #A5A5A5;
+  text-align: center;
+}
+.calculate__request .request__content p span {
+  color: #ea4c14;
+}
+.calculate__request .request__content .request__btn {
+  padding: 1rem 2.5rem;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 980px) {
+  .calculate__title {
+    display: none;
+  }
+  .calculate__request .request__title {
+    display: block;
+  }
+  .calculate__request .request__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .calculate__request .request__content p {
+    text-align: start;
+  }
+  .calculate__request .request__content .request__btn {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+@media (max-width: 480px) {
+  .calculate .request__content {
+    grid-template-columns: 1fr;
+  }
+  .calculate .request__content input {
+    background-color: transparent;
+    border: 1px solid #E5E5E5;
+  }
+  .calculate .request__content input:last-of-type {
+    margin-bottom: 0.7rem;
+  }
+  .calculate .request__content .request__btn {
+    grid-row: 3/4;
+    padding: 1.5rem 3rem;
+  }
+  .calculate .request__content p {
+    text-align: center;
+  }
+}

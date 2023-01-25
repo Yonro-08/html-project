@@ -1244,3 +1244,87 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
 }
+.calculate {
+  padding: 5rem 0;
+  &__title {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font: 700 3.4em/1.1em "BebasNeue";
+  }
+  &__request {
+    margin: 0 auto;
+    color: #ffffff;
+    .request__title {
+      display: none;
+      margin-bottom: 2rem;
+      text-align: center;
+      font: 700 3.9em/1em "BebasNeue";
+    }
+    .request__content {
+      display: grid;
+      grid-template-columns: 50%;
+      justify-content: center;
+      gap: 1.5rem;
+      input {
+        height: 70px;
+        text-indent: 0.9rem;
+        border-radius: 6px;
+      }
+      input::placeholder {
+        color: #9A9A9A;
+      }
+      p {
+        color: #A5A5A5;
+        text-align: center;
+        span {
+          color: $color;
+        }
+      }
+      .request__btn {
+        padding: 1rem 2.5rem;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  @media (max-width: 980px) {
+    &__title {
+      display: none;
+    }
+    &__request {
+      .request__title {
+        display: block;
+      }
+      .request__content {
+        grid-template-columns: repeat(2, 1fr);
+        p {
+          text-align: start;
+        }
+        .request__btn {
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .request__content {
+      grid-template-columns: 1fr;
+      input {
+        background-color: transparent;
+        border: 1px solid #E5E5E5;
+      }
+      input:last-of-type {
+        margin-bottom: 0.7rem;
+      }
+      .request__btn {
+        grid-row: 3/4;
+        padding: 1.5rem 3rem;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
