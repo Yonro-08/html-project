@@ -292,17 +292,16 @@ $title25: 700 2.8em/1em "BebasNeue";
         }
       }
     }
-
-    @media (max-width: 980px) {
+    @media (max-width: 768px) {
       .content__cards {
         grid-template-columns: 1fr;
 
         .content__card {
-          grid-template-columns: 200px 1fr;
+          grid-template-columns: 150px 1fr;
         }
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       .content__cards {
         .content__card {
           grid-template-columns: max-content 1fr;
@@ -924,7 +923,7 @@ $title25: 700 2.8em/1em "BebasNeue";
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-bottom: 2.5rem;
-    
+
     .imgs__column {
       display: grid;
       gap: 1.5rem;
@@ -1030,12 +1029,12 @@ $title25: 700 2.8em/1em "BebasNeue";
 
       .imgs__column {
         .projects__img {
+          height: 350px;
           a {
-            height: 350px;
             object-position: bottom;
-          }
-          img {
-            filter: grayscale(0%);
+            img {
+              filter: grayscale(0%);
+            }
           }
 
           img:hover {
@@ -1223,6 +1222,7 @@ $title25: 700 2.8em/1em "BebasNeue";
     flex-direction: column;
     padding: 1.5rem 2.5rem;
     border: 1px solid #414141;
+    transition: all 0.5s ease;
 
     .card__img {
       position: relative;
@@ -1604,36 +1604,31 @@ $title25: 700 2.8em/1em "BebasNeue";
         grid-template-columns: none;
         font-size: 0.8em;
 
-        .row_3 {
-          grid-template-columns: none;
-
-          .footer__graph {
-            display: none;
-          }
-        }
-
-        .row_2 {
+        .footer__graph {
           display: none;
         }
+      }
 
-        .row_4 {
-          grid-row: 3/4;
-        }
+      .row_2 {
+        display: none;
+      }
 
-        .row_5 {
-          display: block;
-          grid-row: 2/3;
-          grid-column: span 2;
-          margin-bottom: 0.2rem;
+      .row_4 {
+        grid-row: 3/4;
+      }
 
-          .txt_1 {
-            margin-bottom: 0.5rem;
-          }
+      .row_5 {
+        display: block;
+        grid-row: 2/3;
+        grid-column: span 2;
+        margin-bottom: 0.2rem;
+
+        .txt_1 {
+          margin-bottom: 0.5rem;
         }
       }
     }
   }
-
 }
 
 // animation
@@ -1674,7 +1669,12 @@ $title25: 700 2.8em/1em "BebasNeue";
     left: 0;
     width: 0%;
     height: 100%;
-    background: linear-gradient(rgba(255, 0, 0, 0.142), rgba(255, 255, 0, 0.26), rgba(0, 0, 255, 0.144), rgba(255, 166, 0, 0.18));
+    background: linear-gradient(
+      rgba(255, 0, 0, 0.142),
+      rgba(255, 255, 0, 0.26),
+      rgba(0, 0, 255, 0.144),
+      rgba(255, 166, 0, 0.18)
+    );
     animation: back 5s infinite ease-in-out;
   }
 
