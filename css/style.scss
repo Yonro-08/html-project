@@ -99,30 +99,29 @@ $title25: 700 2.8em/1em "BebasNeue";
   }
 
   @media (max-width: 1280px) {
-    .menu,
     .header__connect {
       display: none;
     }
-
+  }
+  @media (max-width: 980px) {
+    .menu {
+      display: none;
+    }
     .header__dropnav {
       display: block;
     }
-
     .header__dropnav:hover .header__dropmenu {
       display: block;
-      height: 300px;
+      height: 320px;
       padding: 10px;
-
       li:hover {
         color: $color;
       }
     }
-
     &__container::after {
       display: none;
     }
   }
-
   @media (max-width: 768px) {
     &__logo {
       display: none;
@@ -141,9 +140,11 @@ $title25: 700 2.8em/1em "BebasNeue";
         display: none;
       }
     }
+    .header__dropnav:hover .header__dropmenu {
+      height: 250px;
+    }
   }
 }
-
 .services {
   padding: 9.3rem 0;
   overflow-x: hidden;
@@ -538,7 +539,6 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
 }
-
 .guarantees {
   position: relative;
   padding: 3rem 0;
@@ -684,10 +684,9 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
 }
-
 .advantages {
   padding: 7.5rem 0;
-  background-color: #2e2e30;
+  background-color: #2e2e31;
 
   &__content {
     display: grid;
@@ -804,7 +803,6 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
 }
-
 .request {
   padding: 5rem 0;
   background-color: #222224;
@@ -868,10 +866,9 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
 }
-
 .projects {
   padding: 7.5rem 0;
-  background-color: #2e2e30;
+  background-color: #2e2e31;
 
   &__title {
     margin-bottom: 3.2rem;
@@ -981,6 +978,10 @@ $title25: 700 2.8em/1em "BebasNeue";
   }
 
   @media (max-width: 980px) {
+    & {
+      padding: 60px 0;
+      background-color: #222224;
+    }
     &__title {
       margin-bottom: 1rem;
       text-align: center;
@@ -1076,15 +1077,10 @@ $title25: 700 2.8em/1em "BebasNeue";
       width: 100%;
     }
   }
-  @media (max-width: 980px) {
-    & {
-      padding: 60px 0;
-    }
-  }
 }
 .director {
   padding: 5rem 0;
-
+  background-color: #2e2e31;
   &__title {
     margin-bottom: 1.75rem;
     font: $title25;
@@ -1134,6 +1130,9 @@ $title25: 700 2.8em/1em "BebasNeue";
   }
 
   @media (max-width: 980px) {
+    & {
+      background-color: #222224;
+    }
     &__container {
       padding: 0 1rem;
     }
@@ -1170,6 +1169,7 @@ $title25: 700 2.8em/1em "BebasNeue";
 }
 .about {
   padding: 5rem 0;
+  background-color: #2e2e31;
   .about__title {
     margin-bottom: 3rem;
     font: $title25;
@@ -1246,6 +1246,7 @@ $title25: 700 2.8em/1em "BebasNeue";
 }
 .calculate {
   padding: 5rem 0;
+  background-color: #2e2e31;
   &__title {
     margin-bottom: 2.5rem;
     text-align: center;
@@ -1271,10 +1272,10 @@ $title25: 700 2.8em/1em "BebasNeue";
         border-radius: 6px;
       }
       input::placeholder {
-        color: #9A9A9A;
+        color: #9a9a9a;
       }
       p {
-        color: #A5A5A5;
+        color: #a5a5a5;
         text-align: center;
         span {
           color: $color;
@@ -1289,10 +1290,17 @@ $title25: 700 2.8em/1em "BebasNeue";
     }
   }
   @media (max-width: 980px) {
+    & {
+      padding: 5rem 0;
+      background-color: #222224;
+    }
     &__title {
       display: none;
     }
     &__request {
+      padding: 3rem 2rem;
+      background-color: #2e2e31;
+      border-radius: 8px;
       .request__title {
         display: block;
       }
@@ -1313,17 +1321,189 @@ $title25: 700 2.8em/1em "BebasNeue";
       grid-template-columns: 1fr;
       input {
         background-color: transparent;
-        border: 1px solid #E5E5E5;
+        border: 2px solid #e5e5e5;
       }
       input:last-of-type {
         margin-bottom: 0.7rem;
       }
       .request__btn {
         grid-row: 3/4;
-        padding: 1.5rem 3rem;
+        padding: 1rem 2rem;
       }
       p {
         text-align: center;
+      }
+    }
+  }
+}
+.footer {
+  position: relative;
+  padding: 5rem 0;
+  padding-bottom: 2rem;
+  background-color: #070707;
+  &__rows {
+    margin-bottom: 4rem;
+    .row_1 {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      .footer__logo {
+        width: 190px;
+        height: 37px;
+      }
+      .footer__list {
+        justify-content: flex-end;
+        font-size: 1.1em;
+        line-height: 1.35em;
+      }
+      .menu a::after {
+        top: 100%;
+        left: 0;
+      }
+      .menu a:hover::after {
+        width: 100%;
+      }
+    }
+    .row_2 {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2.75rem;
+      a {
+        color: #e74214;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+    .row_3 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      .footer__graph {
+        .txt_1 {
+          margin-bottom: 0.7rem;
+        }
+        .txt_2 {
+          margin-bottom: 0.6rem;
+        }
+      }
+      .footer__contact {
+        display: grid;
+        font-size: 1.1em;
+        line-height: 1.25em;
+        a {
+          justify-self: end;
+        }
+        a:hover {
+          color: $color;
+        }
+        a:last-of-type {
+          align-self: flex-end;
+          color: #e74214;
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+        }
+      }
+    }
+    .row_4 {
+      display: none;
+      color: #e74214;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+    .row_5 {
+      display: none;
+    }
+  }
+  &__rows::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    width: 100%;
+    height: 0.6px;
+    background-color: #e3e2e2;
+  }
+  @media (max-width: 980px) {
+    &__container {
+      padding: 0 1.5rem;
+    }
+    &__rows {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: baseline;
+      row-gap: 1.6rem;
+      margin-bottom: 1rem;
+      .row_1 {
+        height: 100%;
+        grid-template-columns: 1fr;
+        margin-bottom: 0px;
+        .footer__nav {
+          display: grid;
+        }
+        .footer__list {
+          flex-direction: column;
+          align-self: end;
+          gap: 1.5rem;
+          .miss {
+            display: none;
+          }
+        }
+      }
+      .row_3 {
+        grid-template-columns: 1fr;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        gap: 1.7rem;
+        .footer__graph {
+          text-align: end;
+          grid-row: 2/3;
+          .footer__addres {
+            margin-bottom: 1.5rem;
+          }
+        }
+        .footer__contact {
+          gap: 1.5rem;
+          .miss {
+            display: none;
+          }
+        }
+      }
+      .row_4 {
+        display: block;
+        grid-row: 2/3;
+        grid-column: span 2;
+      }
+      .row_2 {
+        grid-column: span 2;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    &__rows {
+      height: min-content;
+      margin-bottom: 3rem;
+      .row_3 {
+        grid-template-columns: none;
+        .footer__graph {
+          display: none;
+        }
+      }
+      .row_2 {
+        display: none;
+      }
+      .row_4 {
+        grid-row: 3/4;
+      }
+      .row_5 {
+        display: block;
+        grid-row: 2/3;
+        grid-column: span 2;
+        margin-bottom: 0.2rem;
+        .txt_1 {
+          margin-bottom: 0.5rem;
+        }
       }
     }
   }
