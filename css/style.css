@@ -35,10 +35,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  font: 500 0.9em/1.35em "Roboto";
+  font-weight: 500;
 }
 .header__connect a:last-of-type {
-  font-size: 0.8rem;
+  font-size: 0.9em;
 }
 .header__connect a:hover {
   color: #ea4c14;
@@ -124,7 +124,7 @@
 }
 .services__visual {
   display: flex;
-  width: 150%;
+  width: 160%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -138,12 +138,14 @@
 .services__visual .visual__content .visual__title {
   width: 85%;
   margin-bottom: 1.25rem;
-  font: 700 3.5em/3.4rem "BebasNeue";
+  font: 700 3.9em/1em "BebasNeue";
 }
 .services__visual .visual__content .visual__txt {
   margin-bottom: 2.5rem;
-  font: 400 0.9em/1.35rem "Roboto";
   letter-spacing: 0.02rem;
+}
+.services__visual .visual__content .visual__btn {
+  margin-right: 1rem;
 }
 .services__visual .visual__imgs {
   display: flex;
@@ -156,7 +158,7 @@
 }
 .services__visual .visual__imgs .img-1 {
   position: relative;
-  width: 70%;
+  width: 55%;
 }
 .services__visual .visual__imgs .img-1::after {
   content: "Жилые комплексы";
@@ -166,7 +168,7 @@
   height: 100%;
   width: 68px;
   padding-right: 1rem;
-  font: 700 1.5em/2rem "BebasNeue";
+  font: 700 1.7em/1.35em "BebasNeue";
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   text-align: center;
@@ -195,7 +197,7 @@
   height: 100%;
   width: 68px;
   padding-right: 1rem;
-  font: 700 1.5em/2rem "BebasNeue";
+  font: 700 1.7em/1.35em "BebasNeue";
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   text-align: center;
@@ -208,7 +210,7 @@
 }
 .services__content .content__title {
   margin-bottom: 4rem;
-  font: 700 2.5em/3.4rem "BebasNeue";
+  font: 700 2.8em/1.36em "BebasNeue";
 }
 .services__content .content__cards {
   display: grid;
@@ -218,8 +220,8 @@
 }
 .services__content .content__cards .content__card {
   display: grid;
-  grid-template-columns: -webkit-max-content 200px;
-  grid-template-columns: max-content 200px;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
@@ -232,7 +234,8 @@
   height: 3.5rem;
 }
 .services__content .content__cards .content__card .card__title {
-  font: 400 1.1em/1.35rem "Roboto";
+  font-size: 1.2em;
+  line-height: 1.2em;
 }
 @media (max-width: 1600px) {
   .services__content .content__cards {
@@ -265,7 +268,7 @@
 }
 .services__prices .services__price .price__title {
   margin-bottom: 1rem;
-  font: 700 1.4em/1.5rem "BebasNeue";
+  font: 700 1.55em/1.1em "BebasNeue";
 }
 .services__prices .services__price .price__title span {
   color: #ea4c14;
@@ -354,8 +357,8 @@
     width: 100%;
     padding: 0 1rem;
   }
-  .services__visual .visual__content .btn {
-    width: 74%;
+  .services__visual .visual__content .visual__btn {
+    margin-right: 0px;
     margin: 0 auto;
   }
   .services__visual .visual__imgs {
@@ -410,8 +413,11 @@
   }
 }
 @media (max-width: 480px) {
+  .services__visual .visual__content {
+    width: 100%;
+  }
   .services__visual .visual__content .visual__title {
-    font-size: 2.75em;
+    font-size: 3.1em;
   }
   .services__visual .visual__imgs {
     width: 100%;
@@ -452,7 +458,7 @@
 
 .guarantees {
   position: relative;
-  padding: 3.2rem 0;
+  padding: 3rem 0;
   background-color: #171719;
 }
 .guarantees__content {
@@ -496,33 +502,26 @@
   grid-column: 2/3;
   grid-row: 1/2;
   color: #a5a5a5;
-  font: 400 0.8em/1rem "Roboto";
+  font: 400 0.9em/1.25em "Roboto";
 }
 .guarantees__content .content__title {
   grid-column: span 2;
-  font: 700 3em/2.9rem "BebasNeue";
-}
-@media (max-width: 1280px) {
-  .guarantees__content .content__title {
-    font-size: 2.5em;
-  }
+  font: 700 3.3em/1em "BebasNeue";
 }
 @media (max-width: 980px) {
   .guarantees__content .content__title {
     align-self: center;
     grid-column: 2/3;
     grid-row: 1/2;
-    font-size: 3em;
   }
   .guarantees__content .content__txt {
     grid-column: 2/3;
     grid-row: 2/3;
-    font: 400 0.8em/1rem "Roboto";
   }
 }
 @media (max-width: 768px) {
   .guarantees__content .content__title {
-    font-size: 1.7em;
+    font-size: 2em;
   }
 }
 @media (max-width: 480px) {
@@ -539,7 +538,7 @@
     grid-column: 1/2;
     grid-row: 3/4;
     text-align: center;
-    font: 400 0.8em/1rem "Roboto";
+    font-size: 0.8em;
   }
 }
 @media (max-width: 980px) {
@@ -582,6 +581,7 @@
 }
 
 .advantages {
+  padding: 7.5rem 0;
   background-color: #2e2e30;
 }
 .advantages__content {
@@ -589,19 +589,18 @@
   grid-template-columns: 41% 50%;
   justify-content: space-between;
   gap: 2.5rem;
-  padding: 150px 0;
 }
 .advantages__content .column-1 .content__title {
   position: relative;
   width: 90%;
   margin-bottom: 4.5rem;
-  font: 700 2.5em/2.5rem "BebasNeue";
+  font: 700 2.8em/1em "BebasNeue";
   transition: all 0.5s linear;
 }
 .advantages__content .column-1 .content__title span {
   color: #ea4c14;
 }
-.advantages__content .column-1 .content__title:before {
+.advantages__content .column-1 .content__title::before {
   content: "";
   position: absolute;
   left: 0;
@@ -625,7 +624,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  font: 700 1em/2.5rem "BebasNeue";
+  font: 700 1em/1.2em "BebasNeue";
   transition: all 0.5s linear;
 }
 .advantages__content .column-1 .content__title:active::after {
@@ -641,14 +640,14 @@
 .advantages__content .column-2 .content__list li {
   position: relative;
   padding: 1.5rem 0;
-  font: 400 1.1em/1.35rem "Roboto";
+  font-size: 1.2em;
   list-style: url(../img/arrow_down.svg);
   transition: all 0.5s linear;
 }
 .advantages__content .column-2 .content__list li p {
   display: none;
   padding: 1.25rem 0;
-  font: 400 0.9em/1.35rem "Roboto";
+  font: 400 0.85em/1.5em "Roboto";
 }
 .advantages__content .column-2 .content__list li::before {
   content: "";
@@ -676,19 +675,19 @@
   height: 150px;
   background-color: #9da0a3;
 }
-
 @media (max-width: 980px) {
   .advantages {
     display: none;
   }
 }
+
 .request {
-  padding: 100px 0;
+  padding: 5rem 0;
   background-color: #222224;
 }
 .request__title {
   margin-bottom: 4rem;
-  font: 700 2.5em/2.5rem "BebasNeue";
+  font: 700 2.8em/1em "BebasNeue";
 }
 .request__title span {
   color: #ea4c14;
@@ -706,10 +705,10 @@
 .request__steps .request__step h5 {
   margin-bottom: 0.5rem;
   color: #ea4c14;
-  font: 700 2.5em/3.4rem "BebasNeue";
+  font: 700 2.5em/1.36em "BebasNeue";
 }
 .request__steps .request__step p {
-  font: 500 1.1em/1.35rem "Roboto";
+  font: 500 1.2em/1.2em "Roboto";
 }
 .request__steps .request__step p span {
   color: #ea4c14;
@@ -722,28 +721,30 @@
   height: 40px;
 }
 .request .request__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 70px;
-  font: 400 0.9em/1.35rem "Roboto";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 4rem;
+  background-color: transparent;
   border: 2px solid #f5f5f5;
   border-radius: 6px;
 }
-
+.request .request__btn:hover {
+  background-color: #ea4c14;
+}
 @media (max-width: 980px) {
   .request {
     display: none;
   }
 }
+
 .projects {
-  padding: 150px 0;
+  padding: 7.5rem 0;
   background-color: #2e2e30;
 }
 .projects__title {
   margin-bottom: 3.2rem;
-  font: 700 2.5em/2.5rem "BebasNeue";
+  font: 700 2.8em/1em "BebasNeue";
 }
 .projects__tags {
   display: flex;
@@ -759,7 +760,6 @@
   align-items: center;
   height: 44px;
   padding: 0 1.4rem;
-  font: 400 0.9em/1.35rem "Roboto";
   border: 1px solid #ffffff;
   border-radius: 6px;
 }
@@ -767,7 +767,6 @@
   align-self: center;
   margin-left: auto;
   color: #e74214;
-  font: 400 0.9em/1.35rem "Roboto";
 }
 .projects__imgs {
   display: grid;
@@ -799,11 +798,11 @@
   bottom: 0;
   width: 100%;
   padding: 1rem 2rem;
-  font: 700 1.6em/2rem "BebasNeue";
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) -7.58%, rgba(0, 0, 0, 0.6) 100%);
   z-index: 2;
 }
 .projects__imgs .imgs__column .projects__img .img__text h5 {
+  font: 700 1.8em/1.25em "BebasNeue";
   margin-bottom: 0.5rem;
 }
 .projects__imgs .imgs__column .projects__img .img__text .text__tag {
@@ -814,10 +813,11 @@
   width: max-content;
   height: 25px;
   gap: 0.5rem;
+  font-size: 0.9em;
+  line-height: 1.25em;
 }
 .projects__imgs .imgs__column .projects__img .img__text .text__tag div {
-  font: 400 0.5em/1.35rem "Roboto";
-  padding: 0 1rem;
+  padding: 0.1rem 1rem;
   border: 1px solid #ffffff;
   border-radius: 6px;
 }
@@ -831,8 +831,7 @@
   width: 436px;
   height: 64px;
   margin: 0 auto;
-  font: 400 0.9em/1.35rem "Roboto";
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 6px;
 }
 @media (max-width: 980px) {
@@ -847,7 +846,6 @@
   }
   .projects__tags .tags__menu {
     display: block;
-    font: 400 0.9em/1.35rem "Roboto";
   }
   .projects__tags .projects__tag {
     display: none;
@@ -869,11 +867,11 @@
   }
   .projects__imgs .imgs__column .projects__img .img__text {
     padding: 1.2rem 2rem;
-    font: 700 2.1em/2rem "BebasNeue";
     background: none;
   }
   .projects__imgs .imgs__column .projects__img .img__text h5 {
     margin-bottom: 0px;
+    font-size: 1.8em;
   }
   .projects__imgs .imgs__column .projects__img .img__text .text__tag {
     display: none;
@@ -905,27 +903,24 @@
     width: 100%;
   }
 }
-
 @media (max-width: 980px) {
   .projects {
     padding: 60px 0;
   }
 }
+
 .director {
-  padding: 100px 0;
+  padding: 5rem 0;
 }
 .director__title {
   margin-bottom: 1.75rem;
-  font: 700 2.5em/2.5rem "BebasNeue";
+  font: 700 2.8em/1em "BebasNeue";
 }
 .director__row {
   display: grid;
   grid-template-columns: 1fr -webkit-max-content;
   grid-template-columns: 1fr max-content;
   gap: 2.2rem;
-}
-.director__row .content__txt {
-  font: 400 0.9em/1.35rem "Roboto";
 }
 .director__row .content__txt p {
   letter-spacing: 2%;
@@ -935,7 +930,7 @@
 }
 .director__row .director__card {
   padding-left: 3rem;
-  border-left: 2px solid #E74214;
+  border-left: 2px solid #e74214;
 }
 .director__row .director__card .card__img {
   width: 120px;
@@ -943,7 +938,7 @@
   margin-bottom: 1rem;
 }
 .director__row .director__card .card__img img {
-  background-color: #4A4A4A;
+  background-color: #4a4a4a;
   border-radius: 100%;
   -o-object-position: top;
      object-position: top;
@@ -952,12 +947,18 @@
 }
 .director__row .director__card .card__title {
   margin-bottom: 0.5rem;
-  font: 700 1.4em/1.5rem "BebasNeue";
+  font: 700 1.6em/1em "BebasNeue";
 }
 .director__row .director__card .card__text {
-  font: 400 0.8em/1rem "Roboto";
+  font: 400 0.9em/1.25em "Roboto";
 }
 @media (max-width: 980px) {
+  .director__container {
+    padding: 0 1rem;
+  }
+  .director__title {
+    display: none;
+  }
   .director__row {
     grid-template-columns: -webkit-max-content 1fr;
     grid-template-columns: max-content 1fr;
@@ -973,13 +974,91 @@
     grid-column: 1/2;
     grid-row: 1/2;
     padding-left: 0;
+    padding-right: 3rem;
     border: none;
-    border-right: 2px solid #E74214;
+    border-right: 2px solid #e74214;
+  }
+}
+@media (max-width: 768px) {
+  .director {
+    display: none;
   }
 }
 
-@media (max-width: 480px) {
-  .director {
+.about {
+  padding: 5rem 0;
+}
+.about .about__title {
+  margin-bottom: 3rem;
+  font: 700 2.8em/1em "BebasNeue";
+}
+.about__cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.about__card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2.5rem;
+  border: 1px solid #414141;
+}
+.about__card .card__img {
+  position: relative;
+  height: 60px;
+  margin-bottom: 2rem;
+}
+.about__card .card__text {
+  margin-bottom: 2rem;
+  text-align: center;
+  flex-grow: 1;
+}
+.about__card .card__btn {
+  display: grid;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1rem;
+}
+.about__card .card__btn img {
+  width: 30px;
+}
+.about__card:hover {
+  background-color: #ea4c14;
+  border: none;
+}
+.about__cards::before {
+  position: absolute;
+  content: "";
+  left: 132px;
+  bottom: -2rem;
+  width: 112px;
+  height: 2px;
+  background-color: #e3e2e2;
+}
+.about__cards::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -2rem;
+  width: 112px;
+  height: 2px;
+  background-color: #e74214;
+}
+@media (max-width: 1600px) {
+  .about__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1280px) {
+  .about__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 980px) {
+  .about {
     display: none;
   }
 }

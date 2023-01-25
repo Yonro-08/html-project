@@ -58,13 +58,14 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   color: #efefef;
+  font: 400 0.9em/1.5em "Roboto";
   letter-spacing: 0.01rem;
   background-color: #222224;
 }
 .container {
   width: 100%;
   max-width: 71%;
-  padding: 0 20px;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 ul[class],
@@ -101,7 +102,6 @@ select {
 .menu {
   display: flex;
   gap: 1.75rem;
-  font: 400 1em/1.35rem "Roboto";
 }
 .menu a {
   position: relative;
@@ -118,7 +118,7 @@ select {
   width: 0px;
   height: 2px;
   background-color: #e74214;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 .menu a:hover::after {
   width: 140%;
@@ -127,11 +127,12 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 94.34%;
-  padding: 1rem 3rem;
-  font: 400 0.9em/1.35rem "Roboto";
+  padding: 1rem 2.8rem;
   background-color: var(--color);
   border-radius: 6px;
+}
+.btn a {
+  width: max-content;
 }
 @media (max-width: 1600px) {
   .container {
